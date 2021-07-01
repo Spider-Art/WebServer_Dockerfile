@@ -1,0 +1,11 @@
+oc new-build --strategy docker --binary --docker-image registry.redhat.io/rhel8/httpd-24 --name www-page
+
+oc get is
+
+oc start-build www-page --from-dir . --follow
+
+oc get is
+
+oc new-app www-page
+
+
